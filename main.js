@@ -1,26 +1,12 @@
 new Vue({
-	el: '#imageToggle',
-	data: {
-		src: './images/one.png'
-	},
-	methods: {
-		toggle: function() {
-			if (!event.target.src) {
-				return;
-			} else {
-				this.src = event.target.src;
-			}
-		}
-	}
-});
-
-new Vue({
-	el: '#count',
+	el: '#app',
 	data: {
 		days: 0,
 		hours: 0,
 		minutes: 0,
-		seconds: 0
+		seconds: 0,
+		src: './images/one.png',
+		show: false
 	},
 	methods: {
 		countDown() {
@@ -36,6 +22,16 @@ new Vue({
 					(distance % (1000 * 60 * 60)) / (1000 * 60)
 				)),
 				(this.seconds = Math.floor((distance % (1000 * 60)) / 1000));
+		},
+		toggle: function() {
+			if (!event.target.src) {
+				return;
+			} else {
+				this.src = event.target.src;
+			}
+		},
+		openModal: function() {
+			this.show = !this.show
 		}
 	},
 	mounted() {

@@ -14,14 +14,14 @@
 	<body class="wrapper">
 		<div class="wrapper main-wrapper">
 			<header class="banner"></header>
-			<div class="container">
+			<div id="app" class="container">
 				<main>
 					<div id="count" class="timer wrapper">
 						<h2>
 							COUPON OFFER ENDS:
 							<em>{{ hours }}:{{ minutes }}:{{ seconds }}</em>
 						</h2>
-						<button>GET DEAL</button>
+						<button v-on:click="openModal">GET DEAL</button>
 					</div>
 					<div class="logos">
 						<img src="./images/logo.png" class="main-logo" />
@@ -49,12 +49,23 @@
 								</div>
 								<div class="product-discount">
 									<p>56% Off</p>
-									<button>GET THIS DEAL</button>
+									<button v-on:click="openModal">GET THIS DEAL</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</main>
+				<div v-show="show" class="modal">
+					<div class="modal-content">
+						<span v-on:click="openModal" class="close-button">&times;</span>
+						<h1>Get Your Coupon</h1>
+						<form>
+							<input placeholder="First name">
+							<input placeholder="Email address">
+							<button>GET COUPON</button>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
