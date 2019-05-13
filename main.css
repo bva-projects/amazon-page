@@ -1,0 +1,188 @@
+*,
+body,
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: #dbdbdb;
+}
+
+button {
+  background: green;
+  border-radius: 30px;
+  border: none;
+  padding: 1rem 2.75rem;
+  font-size: 1.1rem;
+  color: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  letter-spacing: 1.2px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: yellowgreen;
+}
+
+.main-wrapper {
+  background: #ffffff;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 0px 50px;
+}
+
+.banner {
+  background: url("./images/banner.jpg");
+  height: 175px;
+  background-size: cover;
+  -webkit-box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timer h2 {
+  font-size: 2rem;
+  padding-top: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-flex: initial;
+      -ms-flex-positive: initial;
+          flex-grow: initial;
+  margin-bottom: 2rem;
+}
+
+.logos img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.logos .main-logo {
+  width: 7rem;
+}
+
+.logos .amazon-logo {
+  width: 10rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+#imageToggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-itmes: center;
+  padding-bottom: 3rem;
+}
+
+.product-images img {
+  width: 80%;
+}
+
+.product-images figure {
+  width: 10rem;
+  height: 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.product-images .one {
+  border-right: none !important;
+}
+
+.product-images .three {
+  border-left: none !important;
+}
+
+.main-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 29rem;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.main-image img {
+  width: 18rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.product-discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.product-discount p {
+  font-size: 2.5rem;
+}
+/*# sourceMappingURL=main.css.map */

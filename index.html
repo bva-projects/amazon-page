@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Amazon Landing Page Template</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" type="text/css" href="main.css" />
+	</head>
+	<body class="wrapper">
+		<div class="wrapper main-wrapper">
+			<header class="banner"></header>
+			<div class="container">
+				<main>
+					<div id="count" class="timer wrapper">
+						<h2>
+							COUPON OFFER ENDS:
+							<em>{{ hours }}:{{ minutes }}:{{ seconds }}</em>
+						</h2>
+						<button>GET DEAL</button>
+					</div>
+					<div class="logos">
+						<img src="./images/logo.png" class="main-logo" />
+						<img src="images/available-amazon.png" class="amazon-logo" />
+					</div>
+					<div class="product">
+						<h1>
+							Project 7 Deals! Buy 1 Get 1 FREE - Stock is limited.
+						</h1>
+						<div id="imageToggle">
+							<div class="main-image">
+								<img v-bind:src="src" />
+							</div>
+							<div>
+								<div class="product-images" v-on:click="toggle">
+									<figure class="one">
+										<img class="editable" src="./images/one.png" />
+									</figure>
+									<figure class="two">
+										<img class="editable" src="./images/two.jpg" />
+									</figure>
+									<figure class="three">
+										<img class="editable" src="./images/three.png" />
+									</figure>
+								</div>
+								<div class="product-discount">
+									<p>56% Off</p>
+									<button>GET THIS DEAL</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
