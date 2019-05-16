@@ -11,15 +11,32 @@ body {
 	background: #dbdbdb;
 }
 
-button {
+#main-button {
 	background: green;
-	border-radius: 30px;
+	border-radius: 50px;
 	border: none;
-	padding: 1rem 2.75rem;
+	padding: 1.75rem 3.75rem;
 	font-size: 1.1rem;
 	color: #fff;
 	align-self: center;
 	letter-spacing: 1.2px;
+	margin-top: 1rem;
+	&:hover {
+		cursor: pointer;
+		background: yellowgreen;
+	}
+}
+
+#modal-button {
+	background: green;
+	border-radius: 50px;
+	border: none;
+	padding: 1rem 2rem;
+	font-size: 1.1rem;
+	color: #fff;
+	align-self: center;
+	letter-spacing: 1.2px;
+	margin-top: 1rem;
 	&:hover {
 		cursor: pointer;
 		background: yellowgreen;
@@ -50,10 +67,15 @@ button {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	img {
+		width: 7rem;
+	}
 }
 
 .timer h2 {
-	font-size: 2rem;
+	font-size: 1.5rem;
+	margin-right: 1rem;
+	margin-left: 1rem;
 	padding-top: 2.5rem;
 	text-align: center;
 	margin-bottom: 2rem;
@@ -75,21 +97,35 @@ button {
 	}
 }
 
+.title-button {
+	display: flex;
+	flex-direction: column;
+}
+
 h1 {
 	text-align: center;
+	margin-top: 1.75rem;
+	margin-bottom: 2.5rem;
+	@media only screen and (max-width: 895px) {
+		font-size: 1.5rem;
+	}
 }
 
 #imageToggle {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-bottom: 7rem;
+	@media only screen and (max-width: 895px) {
+		flex-direction: column;
+	}
 }
 
 .product-images {
 	display: flex;
 	justify-content: center;
-	align-itmes: center;
-	padding-bottom: 3rem;
+	align-items: center;
+	padding-bottom: 2rem;
 	img {
 		width: 80%;
 	}
@@ -145,6 +181,9 @@ h1 {
 	visibility: visible;
 	transform: scale(1.1);
 	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+	h1 {
+		margin-bottom: 0.5rem;
+	}
 }
 .modal-content {
 	position: absolute;
@@ -171,7 +210,7 @@ h1 {
 .show-modal {
 	opacity: 1;
 	visibility: visible;
-	transform: scale(1.0);
+	transform: scale(1);
 	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 form {

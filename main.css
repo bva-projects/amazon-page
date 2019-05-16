@@ -12,20 +12,40 @@ body {
   background: #dbdbdb;
 }
 
-button {
+#main-button {
   background: green;
-  border-radius: 30px;
+  border-radius: 50px;
   border: none;
-  padding: 1rem 2.75rem;
+  padding: 1.75rem 3.75rem;
   font-size: 1.1rem;
   color: #fff;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   letter-spacing: 1.2px;
+  margin-top: 1rem;
 }
 
-button:hover {
+#main-button:hover {
+  cursor: pointer;
+  background: yellowgreen;
+}
+
+#modal-button {
+  background: green;
+  border-radius: 50px;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  color: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  letter-spacing: 1.2px;
+  margin-top: 1rem;
+}
+
+#modal-button:hover {
   cursor: pointer;
   background: yellowgreen;
 }
@@ -62,8 +82,14 @@ button:hover {
           align-items: center;
 }
 
+.timer img {
+  width: 7rem;
+}
+
 .timer h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   padding-top: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -95,8 +121,26 @@ button:hover {
   width: 10rem;
 }
 
+.title-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 h1 {
   text-align: center;
+  margin-top: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 895px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
 #imageToggle {
@@ -109,6 +153,16 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 7rem;
+}
+
+@media only screen and (max-width: 895px) {
+  #imageToggle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .product-images {
@@ -118,8 +172,10 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  align-itmes: center;
-  padding-bottom: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2rem;
 }
 
 .product-images img {
@@ -201,6 +257,10 @@ h1 {
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
+.modal h1 {
+  margin-bottom: 0.5rem;
 }
 
 .modal-content {

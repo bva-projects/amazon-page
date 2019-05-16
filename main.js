@@ -31,7 +31,7 @@ new Vue({
 			}
 		},
 		openModal: function() {
-			this.show = !this.show
+			this.show = !this.show;
 		}
 	},
 	mounted() {

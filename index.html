@@ -16,21 +16,13 @@
 			<header class="banner"></header>
 			<div id="app" class="container">
 				<main>
-					<div id="count" class="timer wrapper">
-						<h2>
-							COUPON OFFER ENDS:
-							<em>{{ hours }}:{{ minutes }}:{{ seconds }}</em>
-						</h2>
-						<button v-on:click="openModal">GET DEAL</button>
-					</div>
-					<div class="logos">
-						<img src="./images/logo.png" class="main-logo" />
-						<img src="images/available-amazon.png" class="amazon-logo" />
-					</div>
-					<div class="product">
+					<div class="title-button">
 						<h1>
 							Project 7 Deals! Buy 1 Get 1 FREE - Stock is limited.
 						</h1>
+						<button id="main-button" v-on:click="openModal">GET DEAL</button>
+					</div>
+					<div class="product">
 						<div id="imageToggle">
 							<div class="main-image">
 								<img v-bind:src="src" />
@@ -47,9 +39,13 @@
 										<img class="editable" src="./images/three.png" />
 									</figure>
 								</div>
-								<div class="product-discount">
-									<p>56% Off</p>
-									<button v-on:click="openModal">GET THIS DEAL</button>
+								<div id="count" class="timer wrapper">
+									<img src="./images/logo.png" class="main-logo" />
+									<h2>
+										COUPON OFFER ENDS:
+										<em>{{ hours }}:{{ minutes }}:{{ seconds }}</em>
+									</h2>
+									<img src="images/available-amazon.png" class="amazon-logo" />
 								</div>
 							</div>
 						</div>
@@ -60,9 +56,9 @@
 						<span v-on:click="openModal" class="close-button">&times;</span>
 						<h1>Get Your Coupon</h1>
 						<form>
-							<input placeholder="First name">
-							<input placeholder="Email address">
-							<button>GET COUPON</button>
+							<input required placeholder="First name" />
+							<input required placeholder="Email address" />
+							<button id="modal-button">GET COUPON</button>
 						</form>
 					</div>
 				</div>
