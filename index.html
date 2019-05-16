@@ -55,10 +55,10 @@
 					<div class="modal-content">
 						<span v-on:click="openModal" class="close-button">&times;</span>
 						<h1>Get Your Coupon</h1>
-						<form>
-							<input required placeholder="First name" />
-							<input required placeholder="Email address" />
-							<button id="modal-button">GET COUPON</button>
+						<form netlify>
+							<input name="name" required placeholder="First name" />
+							<input name="email" required placeholder="Email address" />
+							<button type="submit" id="modal-button">GET COUPON</button>
 						</form>
 					</div>
 				</div>
