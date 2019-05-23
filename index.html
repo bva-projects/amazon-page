@@ -72,8 +72,11 @@
 								required
 								placeholder="Email address"
 							/>
-							<button type="submit" id="modal-button">
+							<button v-show="input" type="submit" id="modal-button">
 								GET COUPON
+							</button>
+							<button v-show="text" v-on:click="visitStore" id="modal-button">
+								VISIT STORE
 							</button>
 						</form>
 					</div>

@@ -42,6 +42,9 @@ new Vue({
 		},
 		closeModal() {
 			this.show = !this.show;
+		},
+		visitStore() {
+			window.location = 'https://www.amazon.com/project7';
 		}
 	},
 	mounted() {
