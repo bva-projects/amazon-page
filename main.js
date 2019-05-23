@@ -6,7 +6,10 @@ new Vue({
 		minutes: 0,
 		seconds: 0,
 		src: './images/one.png',
-		show: false
+		show: false,
+		cuponCode: '45433UFH',
+		input: true,
+		text: false
 	},
 	methods: {
 		countDown() {
@@ -32,9 +35,27 @@ new Vue({
 		},
 		openModal: function() {
 			this.show = !this.show;
+		},
+		showCupon() {
+			this.input = false;
+			this.text = true;
+		},
+		closeModal() {
+			this.show = !this.show;
 		}
 	},
 	mounted() {
 		this.interval = setInterval(() => this.countDown());
 	}
+});
+
+const scriptURL =
+	'https://script.google.com/macros/s/AKfycbzMPIzOtirqtzp_GJ3tG5IH8AE72X9aMRBysJszK6n38393oOLQ/exec';
+const form = document.forms['submit-to-google-sheet'];
+
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+		.then(response => console.log('Success!', response))
+		.catch(error => console.error('Error!', error.message));
 });

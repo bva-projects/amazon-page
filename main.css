@@ -129,6 +129,14 @@ form input {
   margin: 0.5rem;
 }
 
+.cupon-code {
+  font-size: 2rem;
+}
+
+.cupon-code-text {
+  font-size: 1rem;
+}
+
 #main-button {
   background: green;
   border-radius: 50px;

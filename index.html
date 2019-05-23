@@ -53,12 +53,28 @@
 				</main>
 				<div v-show="show" class="modal">
 					<div class="modal-content">
-						<span v-on:click="openModal" class="close-button">&times;</span>
+						<span v-on:click="closeModal" class="close-button">&times;</span>
 						<h1>Get Your Coupon</h1>
-						<form netlify>
-							<input name="name" required placeholder="First name" />
-							<input name="email" required placeholder="Email address" />
-							<button type="submit" id="modal-button">GET COUPON</button>
+						<form v-on:submit="showCupon" name="submit-to-google-sheet">
+							<input
+								v-show="input"
+								name="name_1"
+								required
+								placeholder="First name"
+							/>
+							<p v-show="text" class="cupon-code-text">
+								Copy the code below and use on Checkout.
+							</p>
+							<p v-show="text" class="cupon-code">{{ cuponCode }}</p>
+							<input
+								v-show="input"
+								name="email_1"
+								required
+								placeholder="Email address"
+							/>
+							<button type="submit" id="modal-button">
+								GET COUPON
+							</button>
 						</form>
 					</div>
 				</div>
