@@ -65,7 +65,16 @@
 							<p v-show="text" class="cupon-code-text">
 								Copy the code below and use on Checkout.
 							</p>
-							<p v-show="text" class="cupon-code">{{ cuponCode }}</p>
+							<input v-show="text" class="cupon-code" v-model="cuponCode" />
+							<button
+								v-clipboard:copy="cuponCode"
+								v-clipboard:success="onCopy"
+								v-clipboard:error="onError"
+								class="copy-code"
+								v-show="text"
+							>
+								Copy Code
+							</button>
 							<input
 								v-show="input"
 								name="email_1"
@@ -84,6 +93,7 @@
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+		<script src="node_modules/vue-clipboard2/dist/vue-clipboard.min.js"></script>
 		<script src="main.js"></script>
 	</body>
 </html>

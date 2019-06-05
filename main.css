@@ -137,6 +137,10 @@ form input {
   font-size: 1rem;
 }
 
+.copy-code {
+  padding: 0.15rem;
+}
+
 #main-button {
   background: green;
   border-radius: 50px;

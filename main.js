@@ -45,6 +45,12 @@ new Vue({
 		},
 		visitStore() {
 			window.location = 'https://www.amazon.com/project7';
+		},
+		onCopy: function(e) {
+			alert('You just copied: ' + e.text);
+		},
+		onError: function(e) {
+			alert('Failed to copy texts');
 		}
 	},
 	mounted() {
